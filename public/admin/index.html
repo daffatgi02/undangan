@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel — Undangan Halal Bihalal WIG</title>
+    <!-- Styles moved to separate file -->
+    <link rel="stylesheet" href="/public/admin/admin.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>🕌 Panel Admin Undangan</h1>
+        <p>Halal Bihalal · PT Wijaya Inovasi Gemilang · 28 Maret 2026</p>
+    </div>
+    <span class="header-badge">Admin</span>
+</header>
+
+<main>
+    <!-- Add Guest Form -->
+    <div class="add-card">
+        <h2>✉️ Buat Undangan Baru</h2>
+        
+        <div class="input-row">
+            <input 
+                type="text" 
+                id="guestNameInput" 
+                placeholder="Nama lengkap tamu, cth: Bapak Budi Santoso"
+                autocomplete="off"
+            >
+            <button class="btn-add" id="btnAdd" onclick="addGuest()">+ Buat Link</button>
+        </div>
+
+        <!-- NEW: Option Toggle -->
+        <div class="form-options">
+            <label for="requiresGiftCheckbox" title="Hapus centang jika tamu ini tidak wajib membawa kado/mengikuti doorprize.">
+                <input 
+                    type="checkbox" 
+                    id="requiresGiftCheckbox" 
+                    class="custom-checkbox" 
+                    checked
+                >
+                🎁 Tamu diharapkan membawa kado (Doorprize)
+            </label>
+        </div>
+    </div>
+
+    <!-- Guest List -->
+    <div class="list-header">
+        <h2>Daftar Tamu</h2>
+        <span class="count-badge" id="guestCount">0 tamu</span>
+    </div>
+
+    <div id="guestList" class="guest-list">
+        <div class="loading">Memuat data...</div>
+    </div>
+</main>
+
+<!-- Edit Guest Modal -->
+<div class="modal-overlay" id="editModalOverlay">
+    <div class="modal-box">
+        <h3>✏️ Edit Tamu Undangan</h3>
+        <div class="modal-body">
+            <input type="hidden" id="editGuestSlug">
+            
+            <label class="modal-label">Nama Lengkap</label>
+            <input type="text" id="editGuestName" class="modal-input" placeholder="Masukkan nama...">
+            
+            <label class="form-options">
+                <input type="checkbox" id="editGuestGift" class="custom-checkbox">
+                🎁 Tamu diharapkan membawa kado (Doorprize)
+            </label>
+        </div>
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="closeEditModal()">Batal</button>
+            <button class="btn-save" id="btnSaveEdit" onclick="saveEditedGuest()">Simpan Perubahan</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Logic moved to separate file -->
+<script src="/public/admin/admin.js"></script>
+</body>
+</html>

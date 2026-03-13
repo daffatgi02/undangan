@@ -122,63 +122,32 @@
     <!-- ══ SECTION 2 — TITLE ══ -->
     <section class="sec sec--title" id="s-title">
         <div class="title-frame" id="title-frame">
-            <!-- SVG Islamic Ornament Frame (Custom) -->
-            <div class="title-frame-svg">
-                <svg viewBox="0 0 200 200" preserveAspectRatio="none">
-                    <defs>
-                        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="var(--gold)" />
-                            <stop offset="40%" stop-color="var(--gold-l)" />
-                            <stop offset="60%" stop-color="var(--gold)" />
-                            <stop offset="100%" stop-color="#826414" />
-                        </linearGradient>
-                        <linearGradient id="green-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#0a3d2e" />
-                            <stop offset="100%" stop-color="#062b20" />
-                        </linearGradient>
-                        <filter id="shadow">
-                            <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(0,0,0,0.5)" />
-                        </filter>
-                    </defs>
-
-                    <!-- Outer Base (Shadow & Outer Gold Edge) -->
-                    <path
-                        d="M 100,5 Q 118,48 165,35 Q 152,82 195,100 Q 152,118 165,165 Q 118,152 100,195 Q 82,152 35,165 Q 48,118 5,100 Q 48,82 35,35 Q 82,48 100,5 Z"
-                        fill="url(#gold-grad)" filter="url(#shadow)" />
-
-                    <!-- Inner Green Background -->
-                    <path
-                        d="M 100,10 Q 116,50 160,40 Q 150,84 190,100 Q 150,116 160,160 Q 116,150 100,190 Q 84,150 40,160 Q 50,116 10,100 Q 50,84 40,40 Q 84,50 100,10 Z"
-                        fill="url(#green-grad)" />
-
-                    <!-- Delicate Inner Gold Line -->
-                    <path
-                        d="M 100,15 Q 115,52 155,45 Q 148,85 185,100 Q 148,115 155,155 Q 115,148 100,185 Q 85,148 45,155 Q 52,115 15,100 Q 52,85 45,45 Q 85,52 100,15 Z"
-                        fill="none" stroke="url(#gold-grad)" stroke-width="1.2" opacity="0.8" />
-                </svg>
+            <!-- PNG Islamic Ornament Frame -->
+            <div class="title-frame-img">
+                <img src="/assets/HALAL BI HALAL.png" alt="Ornamental Frame" />
             </div>
 
             <div class="title-frame-content">
                 <!-- Company Logo -->
-                <div id="company-logo" style="margin-bottom:1.5rem; display:flex; justify-content:center;">
+                <div id="company-logo" style="margin-bottom:1rem; display:flex; justify-content:center;">
                     <img src="/assets/lentera.png" alt="Logo PT WIG"
-                        style="width:90px; height:auto; filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));">
+                        style="width:70px; height:auto; filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));">
                 </div>
 
                 <span id="label-undangan"
                     style="display:block;font-size:.65rem;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">Undangan</span>
 
-                <h1 class="title-3d" id="title-main" style="font-size:4.5rem; letter-spacing: 0.02em;">Halal Bihalal
+                <h1 class="title-3d" id="title-main" style="font-size:3.5rem; letter-spacing: 0.02em;">Halal Bihalal
                 </h1>
 
-                <div class="divider" style="margin:1.5rem auto;max-width:200px">
+                <div class="divider" style="margin:1rem auto;max-width:140px">
                     <div class="divider__line" style="opacity:.5"></div>
                     <div class="divider__dot" style="width:5px;height:5px"></div>
                     <div class="divider__line" style="opacity:.5"></div>
                 </div>
 
                 <h2 id="company"
-                    style="font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-m);margin-bottom:1.25rem">
+                    style="font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ivory-m);margin-bottom:0">
                     PT Wijaya Inovasi Gemilang</h2>
             </div>
         </div>

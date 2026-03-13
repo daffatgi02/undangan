@@ -27,6 +27,7 @@
     "id": 1773397278296,
     "slug": "dfcb60e5",
     "name": "Bpk. Anang Siswanto & Keluarga",
-    "createdAt": "2026-03-13T10:21:18.296Z"
+    "createdAt": "2026-03-13T10:21:18.296Z",
+    "requires_gift": true
   }
 ]

@@ -212,6 +212,7 @@ function initNoteReveal() {
 async function initGuestName() {
     const guestNameEl = document.getElementById('guest-name');
     const guestWrapper = document.getElementById('guest-wrapper');
+    const noteSectionEl = document.getElementById('s-note');
 
     // Extract slug from path: /inv/:slug
     const pathParts = window.location.pathname.split('/');
@@ -223,7 +224,15 @@ async function initGuestName() {
         const res = await fetch(`/api/guest/${slug}`);
         if (!res.ok) throw new Error('not found');
         const data = await res.json();
+        
         if (guestNameEl) guestNameEl.textContent = data.name;
+        
+        // Cek properti requires_gift
+        // Sembunyikan section Doorprize & Kado jika requires_gift === false
+        if (data.requires_gift === false && noteSectionEl) {
+            noteSectionEl.style.display = 'none';
+        }
+        
     } catch {
         // Link invalid or server not found — hide the section
         if (guestWrapper) guestWrapper.style.display = 'none';
